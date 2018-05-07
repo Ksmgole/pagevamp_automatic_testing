@@ -1,0 +1,13 @@
+{
+    "name": "kusum/pagevamp-php-test",
+    "authors": [
+        {
+            "name": "Gole G",
+            "email": "kusumgole67@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "codeception/codeception": "^2.4"
+    }
+}
