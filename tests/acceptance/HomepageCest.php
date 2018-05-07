@@ -84,7 +84,7 @@ class HomepageCest
     public function test_StartForFree(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->scrollTo('pv-banner')
+        $I->scrollTo('pv-banner');
         $I->click('Start for Free','.pv-continue');
         $I->wait(5);
 
