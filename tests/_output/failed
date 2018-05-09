@@ -1,1 +1,2 @@
-tests/acceptance/HomepageCest.php:test_Pricing
+tests/acceptance/HomepageCest.php:Login
+tests/acceptance/HomepageCest.php:test_LanguageDropdown
