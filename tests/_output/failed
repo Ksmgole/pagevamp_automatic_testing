@@ -1,1 +1,1 @@
-tests/acceptance/HomepageCest.php:test_prices_and_links_on_pricing_page
+tests/acceptance/HomepageCest.php:test_countrywise_partners_typeform

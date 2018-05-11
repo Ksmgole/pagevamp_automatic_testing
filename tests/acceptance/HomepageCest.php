@@ -62,68 +62,74 @@ class HomepageCest
 //        $I->scrollTo(['css'=>'.pv-how-it-works']);
 //        $I->dontSee('Watch it in action');
 //    }
-
-
-    public function test_prices_and_links_on_pricing_page(AcceptanceTester $I)
-    {
-
-        $I->amOnPage('/');
-        $I->click('//a[@href="https://www.pagevamp.com/np/pricing"]');
-        $I->seeCurrentUrlEquals('/np/pricing');
-        $I->scrollTo('footer');
-        $I->click('//a[@href="https://www.pagevamp.com/np/pricing"]');
-
-        $I->see('Every plan starts off with a 14-day free trial.');
-        $I->see('$ 12');
-        $I->see('$ 15');
-
-        $I->click('//a[@href="#ques-2"]');
-        $I->wait(5);
-        $I->click('//a[@href="https://pagevamp.zendesk.com/hc/en-us/articles/204463719-Connecting-a-Domain-Purchased-Elsewhere"]');
-        $I->wait(5);
-        $I->click('//a[@href="#ques-3"]');
-        $I->wait(5);
-        $I->click('//a[@href="https://pagevamp.zendesk.com/hc/en-us/articles/204463719-Connecting-a-Domain-Purchased-Elsewhere"]');
-        $I->switchToPreviousTab();
-        $I->click('//a[@href="#ques-7"]');
-        $I->wait(2);
-        $I->click('.btn--green');
-        $I->wait(5);
-        $I->see('Your website in seconds', '.modal-body');
-    }
-
-
-//    public function test_Partners(AcceptanceTester $I)
+//
+//
+//    public function test_prices_and_links_on_pricing_page(AcceptanceTester $I)
 //    {
 //        $I->amOnPage('/');
-//        $I->wait(4);
-//        $I->click('Partners');
-//        $I->seeInTitle('Pagevamp Website Reseller Program | Web Design Tools');
+//        $I->click('.navbar-right a[href="https://www.pagevamp.com/np/pricing"]');
 //
-//        /*Akky Partner typeform*/
-//        $I->amOnPage('/?desh=akky');
-//        $I->click('Partners');
-//        $I->switchToNextTab();
-//        $I->wait(5);
-//        $I->seeCurrentUrlEquals('/akky/partners');
-//        $I->closeTab();
+//        $I->scrollTo('footer');
+//        $I->click('.pv-footer-list a[href="https://www.pagevamp.com/np/pricing"]');
 //
-//        /*Mexico Partner typeform*/
-//        $I->amOnPage('/?desh=mx');
-//        $I->click('Partners');
-//        $I->switchToNextTab();
-//        $I->wait(5);
-//        $I->seeCurrentUrlEquals('/mx/partners');
-//        $I->closeTab();
+//        $I->amOnPage('/');
+//        $I->scrollTo('.pv-pricing');
+//        $I->see('$ 12');
+//        $I->see('$ 15');
+//        $I->click('.pv-pricing a[href="https://www.pagevamp.com/np/pricing"]');
 //
-//        /*Italy Partner typeform*/
-//        $I->amOnPage('/?desh=it');
-//        $I->click('Partners');
-//        $I->switchToNextTab();
+//        $I->see('Every plan starts off with a 14-day free trial.');
+//        $I->see('$ 12');
+//        $I->see('$ 15');
+//        $I->click('//a[@href="#ques-2"]');
+//        $I->wait(2);
+//        $I->click('//a[@href="https://pagevamp.zendesk.com/hc/en-us/articles/204463719-Connecting-a-Domain-Purchased-Elsewhere"]');
+//        $I->wait(3);
+//        $I->click('//a[@href="#ques-3"]');
+//        $I->click('//a[@href="https://pagevamp.zendesk.com/hc/en-us/articles/204463719-Connecting-a-Domain-Purchased-Elsewhere"]');
 //        $I->wait(5);
-//        $I->seeCurrentUrlEquals('/it/partners');
-//        $I->closeTab();
+//
+//        $I->click('//a[@href="#ques-7"]');
+//        $I->click('.btn--green');
+//        $I->wait(5);
+//        $I->click('#login-fb');
 //    }
+
+
+    public function test_countrywise_partners_typeform(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->click('.navbar-right a[href="https://reseller.pagevamp.com"]');
+        $I->seeInTitle('Pagevamp Website Reseller Program | Web Design Tools');
+
+        $I->amOnPage('/');
+        $I->scrollTo('footer');
+        $I->click('.pv-footer-list a[href="https://reseller.pagevamp.com"]');
+
+        $I->amOnPage('/');
+        $I->scrollTo('.pv-partners');
+        $I->click('.pv-partners a[href="https://reseller.pagevamp.com"]');
+
+
+        $I->amOnPage('/?desh=akky');
+        $I->scrollTo('.pv-partners');
+        $I->dontSee('Become a Partner');
+        $I->click('.navbar-right a[href="https://www.pagevamp.com/akky/partners"]');
+        $I->switchToNextTab();
+        $I->seeCurrentUrlEquals('/akky/partners');
+        $I->closeTab();
+
+        $I->amOnPage('/?desh=mx');
+        $I->click('.navbar-right a[href="https://www.pagevamp.com/mx/partners"]');
+        $I->switchToNextTab();
+        $I->seeCurrentUrlEquals('/mx/partners');
+        $I->closeTab();
+
+        $I->amOnPage('/?desh=it');
+        $I->click('.navbar-right a[href="https://www.pagevamp.com/it/partners"]');
+        $I->switchToNextTab();
+        $I->seeCurrentUrlEquals('/it/partners');
+    }
 
 
 //    public function Links_to_Features_Page(AcceptanceTester $I)
