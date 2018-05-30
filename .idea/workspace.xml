@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b24511-0409-459e-8b05-db566bc4a75a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.Links_to_Features_Page.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.Links_to_Features_Page.fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.Links_to_Features_Page.fail.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.Links_to_Features_Page.fail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_GetFacebook.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_GetFacebook.fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_GetFacebook.fail.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_GetFacebook.fail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_LanguageDropdown.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_LanguageDropdown.fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_LanguageDropdown.fail.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_LanguageDropdown.fail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_countrywise_partners_typeform.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_countrywise_partners_typeform.fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_countrywise_partners_typeform.fail.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_countrywise_partners_typeform.fail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_prices_and_links_on_pricing_page.fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_prices_and_links_on_pricing_page.fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/HomepageCest.test_prices_and_links_on_pricing_page.fail.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_output/HomepageCest.test_prices_and_links_on_pricing_page.fail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_output/failed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/_support/_generated/AcceptanceTesterActions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/acceptance/HomepageCest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/acceptance/HomepageCest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +33,10 @@
       <file leaf-file-name="HomepageCest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/HomepageCest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="776">
-              <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+            <state relative-caret-position="632">
+              <caret line="274" column="20" lean-forward="true" selection-start-line="274" selection-start-column="20" selection-end-line="274" selection-end-column="20" />
               <folding>
-                <marker date="1526040315015" expanded="true" signature="4930:5197" ph="..." />
+                <marker date="1527679995402" expanded="true" signature="4606:4866" ph="..." />
               </folding>
             </state>
           </provider>
@@ -31,8 +45,8 @@
       <file leaf-file-name="acceptance.suite.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="288">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -125,10 +139,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1539" />
-    <option name="y" value="224" />
-    <option name="width" value="1161" />
-    <option name="height" value="510" />
+    <option name="x" value="1366" />
+    <option name="y" value="25" />
+    <option name="width" value="1920" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +177,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,12 +227,20 @@
       <workItem from="1525781115454" duration="65000" />
       <workItem from="1525862628473" duration="4808000" />
       <workItem from="1525927687430" duration="15932000" />
-      <workItem from="1526032621265" duration="7429000" />
+      <workItem from="1526032621265" duration="7656000" />
+      <workItem from="1526267227892" duration="2816000" />
+      <workItem from="1526383143761" duration="2599000" />
+      <workItem from="1526450905928" duration="599000" />
+      <workItem from="1526556490952" duration="1686000" />
+      <workItem from="1526878326448" duration="10697000" />
+      <workItem from="1527477339793" duration="2819000" />
+      <workItem from="1527668436114" duration="394000" />
+      <workItem from="1527676262360" duration="4987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86790000" />
+    <option name="totallyTimeSpent" value="113614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1433" y="-2" width="1853" height="1082" extended-state="6" />
@@ -257,7 +279,7 @@
         <state relative-caret-position="2106">
           <caret line="117" column="1" selection-start-line="117" selection-end-line="118" />
           <folding>
-            <marker date="1526040315015" expanded="true" signature="4930:5197" ph="..." />
+            <marker date="1527679995402" expanded="true" signature="4606:4866" ph="..." />
           </folding>
         </state>
       </provider>
@@ -592,17 +614,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance.suite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="288">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/HomepageCest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+        <state relative-caret-position="632">
+          <caret line="274" column="20" lean-forward="true" selection-start-line="274" selection-start-column="20" selection-end-line="274" selection-end-column="20" />
           <folding>
-            <marker date="1526040315015" expanded="true" signature="4930:5197" ph="..." />
+            <marker date="1527679995402" expanded="true" signature="4606:4866" ph="..." />
           </folding>
         </state>
       </provider>

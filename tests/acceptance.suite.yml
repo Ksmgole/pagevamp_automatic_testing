@@ -12,5 +12,5 @@ modules:
         - WebDriver:
             url: https://pagevamp.com
             browser: chrome
-            window_size: 1366x768
+            window_size: 1920x1080
         - \Helper\Acceptance

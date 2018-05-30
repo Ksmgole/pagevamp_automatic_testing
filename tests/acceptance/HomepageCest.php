@@ -27,6 +27,7 @@ class HomepageCest
         $I->click(['class' => 'pv-logo--sponsr']);
         $I->switchToNextTab();
         $I->seeInTitle('Akky :: Inicio minisitio Pagevamp');
+        $I->closeTab();
     }
 
 
@@ -36,7 +37,6 @@ class HomepageCest
         $I->scrollTo('footer');
         $I->click('//a[@href="https://www.pagevamp.com/it/cookie-policy"]');
         $I->amOnUrl('https://www.pagevamp.com/it/cookie-policy');
-
 
         $I->amOnPage('/?desh=it');
         $I->see('Questo sito utilizza cookie per il funzionamento e la migliore gestione del sito');
@@ -87,12 +87,7 @@ class HomepageCest
         $I->wait(3);
         $I->click('//a[@href="#ques-3"]');
         $I->click('//a[@href="https://pagevamp.zendesk.com/hc/en-us/articles/204463719-Connecting-a-Domain-Purchased-Elsewhere"]');
-        $I->wait(5);
 
-        $I->click('//a[@href="#ques-7"]');
-        $I->click('.btn--green');
-        $I->wait(5);
-        $I->click('#login-fb');
     }
 
 
@@ -110,106 +105,177 @@ class HomepageCest
         $I->scrollTo('.pv-partners');
         $I->click('.pv-partners a[href="https://reseller.pagevamp.com"]');
 
-
         $I->amOnPage('/?desh=akky');
-        $I->scrollTo('.pv-partners');
         $I->dontSee('Become a Partner');
-        $I->click('.navbar-right a[href="https://www.pagevamp.com/akky/partners"]');
-        $I->switchToNextTab();
-        $I->seeCurrentUrlEquals('/akky/partners');
-        $I->closeTab();
 
         $I->amOnPage('/?desh=mx');
         $I->click('.navbar-right a[href="https://www.pagevamp.com/mx/partners"]');
         $I->switchToNextTab();
         $I->seeCurrentUrlEquals('/mx/partners');
-        $I->closeTab();
 
         $I->amOnPage('/?desh=it');
         $I->click('.navbar-right a[href="https://www.pagevamp.com/it/partners"]');
-        $I->switchToNextTab();
-        $I->seeCurrentUrlEquals('/it/partners');
+
     }
 
 
-//    public function Links_to_Features_Page(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->click('Features');
-//        $I->seeCurrentUrlEquals('/np/features');
-//
-//        $I->scrollTo('footer');
-//        $I->click('Features', '.pv-footer-list');
-//        $I->seeCurrentUrlEquals('/np/features');
-//
-//        $I->amOnPage('/');
-//        $I->scrollTo(['css'=>'.pv-features']);
-//        $I->click('View all features');
-//        $I->seeCurrentUrlEquals('/np/features');
-//
-//        $I->amOnPage('/pricing');
-//        $I->scrollTo(['css'=>'.plan-box']);
-//        $I->click('more');
-//        $I->seeCurrentUrlEquals('/np/features');
-//
-//        $I->amOnPage('/?desh=akky');
-//        $I->scrollTo(['css'=>'.pv-features']);
-//        $I->see('.mx');
-//        $I->click('Claim your business’s web address');
-//        $I->switchToNextTab();
-//        $I->wait(5);
-//        $I->seeInTitle('Akky :: Registra hoy tu dominio en internet');
-//    }
+    public function test_links_to_features_page(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->click('.navbar-right a[href="https://www.pagevamp.com/np/features"]');
+
+        $I->scrollTo('footer');
+        $I->click('.pv-footer-list a[href="https://www.pagevamp.com/np/features"]');
+
+        $I->amOnPage('/');
+        $I->scrollTo('.pv-features');
+        $I->click('.pv-features a[href="https://www.pagevamp.com/np/features"]');
+        $I->seeCurrentUrlEquals('/np/features');
+        $I->scrollTo('.p-b-0');
+        $I->click('.features-item  a[href="https://pvpartners.zendesk.com"]');
+
+        $I->amOnPage('/pricing');
+        $I->scrollTo('.plan-box');
+        $I->click('.plan-box a[href="https://www.pagevamp.com/np/features"]');
+        $I->seeCurrentUrlEquals('/np/features');
+
+        $I->amOnPage('/?desh=akky');
+        $I->scrollTo('.pv-features');
+        $I->see('.mx');
+        $I->click('.pv-features a[href="https://www.akky.mx/"]');
+
+        $I->amOnPage('/features/?desh=akky');
+        $I->scrollTo('.p-b-0');
+        $I->see('Tel. es: +52 (81) 8864-2626');
+    }
 
 
-//    public function Login(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->click('Login');
-//        $I->see('Log in with Facebook');
-//
-//    }
-//
-//
-//    public function Get_pagevamp(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->click('Get Pagevamp');
-//
-//    }
-//
-//    public function test_LanguageDropdown(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->click('a.dropdown-toggle');
-//        $I->click('Spanish');
-//        $I->see('Obtenga más clientes con un hermoso sitio web. Déjanos construirle uno en segundos.');
-//
-//    }
-//
-//    public function test_StartForFree(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->scrollTo(['css' => '.pv-cta']);
-//        $I->click('Start for Free');
-//    }
-//
-//    public function test_GetFacebook(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->scrollTo(['css' => '.pv-section']);
-//        $I->click('Get Facebook');
-//        $I->seeCurrentUrlEquals('/np/facebook-page-creation-service?lang=EN');
-//
-//    }
-//
-//    public function test_DemoSites(AcceptanceTester $I)
-//    {
-//        $I->amOnPage('/');
-//        $I->scrollTo(['css' => '.pv-section--sec']);
-//        $I->wait(5);
-//        $I->click('View Site');
-//    }
+    public function test_login_modal(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->click('.pv-login-trigger');
+        $I->wait(3);
+        $I->click('.login-pv-continue');
+
+        $I->amOnPage('/');
+        $I->scrollTo('footer');
+        $I->click('.pv-login-trigger');
+        $I->wait(3);
+        $I->click('.login-pv-continue');
+    }
+
+
+    public function test_get_pagevamp_modal(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->click('.navbar-right .pv-continue');
+        $I->wait('3');
+        $I->click('#login-fb');
+
+        $I->amOnPage('/');
+        $I->scrollTo('footer');
+        $I->click('.pv-continue');
+        $I->wait('3');
+        $I->click('#login-fb');
+
+        $I->amOnPage('/');
+        $I->scrollTo('.pv-pricing');
+        $I->click('.pv-continue');
+        $I->wait('3');
+        $I->click('#login-fb');
+
+        $I->amOnPage('/pricing');
+        $I->scrollTo('.plan-box');
+        $I->click('.pv-continue');
+        $I->wait('3');
+        $I->click('#login-fb');
+
+        $I->amOnPage('/pricing');
+        $I->click('//a[@href="#ques-7"]');
+        $I->click('.btn--green');
+        $I->wait(5);
+        $I->click('#login-fb');
+    }
+
+    public function test_landingpage_languages(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->click('.navbar-right a.dropdown-toggle');
+        $I->click('Spanish');
+        $I->see('Obtenga más clientes con un hermoso sitio web. Déjanos construirle uno en segundos.');
+
+        $I->click('.navbar-right a.dropdown-toggle');
+        $I->click('Indonesian');
+        $I->see('Dapatkan pelanggan lebih banyak dengan website yang indah. Biarkan kami membuatkannya untuk anda dalam sekejap.');
+
+        $I->click('.navbar-right a.dropdown-toggle');
+        $I->click('Italian');
+        $I->see('Ottieni più clienti con un sito web bellissimo. Fattene costruire uno da noi in pochi secondi.');
+
+        $I->click('.navbar-right a.dropdown-toggle');
+        $I->click('Vietnamese');
+        $I->see('Nhận được nhiều khách hàng với một trang web đẹp. Hãy xây dựng một cho bạn trong vài giây.');
+
+        $I->click('.navbar-right a.dropdown-toggle');
+        $I->click('Thai');
+        $I->see('ได้ลูกค้ามากขึ้นจากเว็บไซต์ที่สวยงาม ให้เราสร้างเว็บไซต์ให้คุณภายในไม่กี่วินาที');
+    }
+
+    public function test_start_for_free_button(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-cta']);
+        $I->click('.pv-continue');
+
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-try']);
+        $I->click('.pv-continue');
+    }
+
+    public function test_link_to_facebook_page_create_service(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-grow-business']);
+        $I->wait('3');
+        $I->click('//a[@href="https://www.pagevamp.com/np/facebook-page-creation-service?lang=EN"]');
+
+        $I->amOnPage('/?desh=akky');
+        $I->scrollTo(['css' => '.pv-grow-business']);
+        $I->wait('3');
+        $I->see('Contrate el servicio de Pagevamp de 1 hasta 5 años en');
+        $I->click('//a[@href="https://www.akky.mx/"]');
+
+    }
+
+    public function test_demo_sites(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-section--sec']);
+        $I->wait(3);
+        $I->click('//a[@data-url="https://jdespresso1.pagevamp.com"]');
+        $I->click('.modal-header.pv-continue');
+        $I->wait(10);
+        $I->switchToIFrame('modal-iframe-url');
+
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-section--sec']);
+        $I->wait(3);
+        $I->click('//a[@data-url="https://glamourbylr1.pagevamp.com"]');
+
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-section--sec']);
+        $I->wait(3);
+        $I->click('//a[@data-url="https://meetsocialgrill1.pagevamp.com"]');
+    }
+
+    public function test_testimonials_slider(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->scrollTo(['css' => '.pv-testimonials']);
+        $I->wait(3);
+        $I->click('.owl-prev');
+        $I->click('.owl-next');
+    }
 
 }
 
